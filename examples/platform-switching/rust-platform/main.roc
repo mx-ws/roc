@@ -1,9 +1,9 @@
 platform "echo-in-rust"
-    requires {} { main : Str }
+    requires {} { mai : Bool }
     exposes []
     packages {}
     imports []
     provides [mainForHost]
 
-mainForHost : Str
-mainForHost = main
+mainForHost : Bool
+mainForHost = if mai then "yes\n" else "no\n"
